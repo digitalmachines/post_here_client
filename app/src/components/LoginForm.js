@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'; 
+import TextField from '@material-ui/core'; 
+import Button from '@material-ui/core'; 
 
 export default function LoginForm () {
 
@@ -47,7 +49,7 @@ export default function LoginForm () {
                 <h1>Welcome to Post Here Subreddit!</h1>
                 <h2>Register below:</h2>
                 <label>Name: </label>
-                <input name="name" onChange={handleRegisterChange} value={register.name}/><br></br>
+                <TextField name="name" onChange={handleRegisterChange} value={register.name}/><br></br>
                 <label>Username (*required): </label>
                 <input name="username" onChange={handleRegisterChange} value={register.username}/><br></br>
                 <label>Email (*required): </label>
