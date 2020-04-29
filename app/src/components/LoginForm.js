@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios'; 
-import TextField from '@material-ui/core'; 
-import Button from '@material-ui/core'; 
+import TextField from '@material-ui/core/TextField'; 
+import Button from '@material-ui/core/Button'; 
 
 export default function LoginForm () {
 
@@ -46,24 +46,24 @@ export default function LoginForm () {
     return (
         <div>
             <form>
-                <h1>Welcome to Post Here Subreddit!</h1>
+                <h1>Post Here for Subreddit!</h1>
                 <h2>Register below:</h2>
                 <label>Name: </label>
-                <TextField name="name" onChange={handleRegisterChange} value={register.name}/><br></br>
-                <label>Username (*required): </label>
-                <input name="username" onChange={handleRegisterChange} value={register.username}/><br></br>
-                <label>Email (*required): </label>
-                <input name="email" onChange={handleRegisterChange} value={register.email}/><br></br>
-                <label>Password (*required): </label>
-                <input name="password" onChange={handleRegisterChange} value={register.password}/><br></br>
-                <button onClick={handleRegister}>REGISTER</button>
+                <TextField variant="outlined" name="name" onChange={handleRegisterChange} value={register.name}/><br></br>
+                <label>Username (*): </label>
+                <TextField variant="outlined" name="username" onChange={handleRegisterChange} value={register.username}/><br></br>
+                <label>Email (*): </label>
+                <TextField variant="outlined" name="email" onChange={handleRegisterChange} value={register.email}/><br></br>
+                <label>Password (*): </label>
+                <TextField variant="outlined" name="password" onChange={handleRegisterChange} value={register.password}/><br></br>
+                <Button variant="outlined" onClick={handleRegister}>REGISTER</Button>
                 <br></br><br></br>
                 OR<br></br><br></br><br></br>
                 Login below: 
-                <input name="username" onChange={handleLoginChange} value={login.username}/><br></br>
+                <TextField variant="outlined" name="username" onChange={handleLoginChange} value={login.username}/><br></br>
                 <label>Password: </label>
-                <input name="password" onChange={handleLoginChange} value={login.password}/><br></br>
-                <button onClick={handleLogin}>LOGIN</button>
+                <TextField variant="outlined" name="password" onChange={handleLoginChange} value={login.password}/><br></br>
+                <Button variant="outlined" onClick={handleLogin}>LOGIN</Button>
             </form>
         </div>
     )
